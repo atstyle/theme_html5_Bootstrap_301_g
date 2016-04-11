@@ -1,0 +1,175 @@
+---
+id: "@Style_theme_Bootstrap_301_g"
+label: "@Style テーマ Bootstrap 301 G"
+name: "@Style テーマ Bootstrap 301 G"
+version: 1.0
+author_link: "http://atstyle.biz/theme_temp/mt6_bootstrap_blog/301g/"
+author_name: "@Style"
+class: blog
+description: "Bootstrapを採用したレスポンシブWebデザインの Movable Type 6 テーマ（テンプレート）です。"
+thumbnail_file: thumb.png
+thumbnail_file_medium: thumb-medium.png
+thumbnail_file_small: thumb-small.png
+
+elements:
+  default_folders:
+    importer: default_folders
+    name: Default Folders
+    component: ~
+    data:
+      about:
+        label: About
+  default_pages:
+    importer: default_pages
+    name: Default Pages
+    component: ~
+    data:
+      index:
+        basename: about
+        title: About
+        text: |
+          <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        tags: "@about,@about_nav"
+        folder: About
+
+  template_set:
+    importer: template_set
+    component: ~
+    data:
+      base_path: templates
+      templates:
+
+        index:
+          feed_recent:
+            label: 最新記事のフィード
+            outfile: atom.xml
+            rebuild_me: 1
+          javascript:
+            label: JavaScript
+            outfile: js/mt.js
+            rebuild_me: 1
+          main_index:
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          prettify_css:
+            label: prettify_css
+            outfile: css/prettify.css
+            rebuild_me: 1
+          prettify_js:
+            label: prettify_js
+            outfile: js/prettify.js
+            rebuild_me: 1
+          custom_css:
+            label: custom_css
+            outfile: css/custom.css
+            rebuild_me: 1
+          sitemap:
+            label: Site Map
+            outfile: sitemap/index.html
+            rebuild_me: 1
+
+        archive:
+          category_entry_listing:
+            label: カテゴリ別記事リスト
+            mappings:
+              category:
+                archive_type: Category
+                file_template: '%-c/%i'
+                preferred: 1
+        individual:
+          entry:
+            label: 記事
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: '%y/%m/%-f'
+                preferred: 1
+        page:
+          page:
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: '%-c/%-f'
+                preferred: 1
+          monthly_entry_listing:
+            label: 月別記事リスト
+            mappings:
+              monthly:
+                archive_type: Monthly
+                file_template: '%y/%m/%i'
+                preferred: 1
+
+        module:
+          banner_footer:
+            label: バナーフッター
+          banner_header:
+            label: バナーヘッダー
+          comment_detail:
+            label: コメント詳細
+          comments:
+            label: コメント
+          entry_summary:
+            label: 記事の概要
+          html_head:
+            label: HTMLヘッダー
+          sidebar:
+            label: サイドバー
+          pagination:
+            label: ページネーション
+          zenback:
+            label: Zenback
+          comment_form:
+            label: コメント入力フォーム
+          trackbacks:
+            label: トラックバック
+          copy_footer:
+            label: コピー(フッター)
+
+        system:
+          comment_preview:
+            label: コメントプレビュー
+          comment_response:
+            label: コメント完了
+          dynamic_error:
+            label: ダイナミックパブリッシングエラー
+          popup_image:
+            label: ポップアップ画像
+          search_results:
+            label: 検索結果
+
+        widget:
+          sub_about:
+            label: About
+          sub_page_list:
+            label: ページリスト
+          sub_monthly_archive_list:
+            label: 月別アーカイブ
+          sub_recent_comments:
+            label: 最近のコメント
+          sub_recent_trackback:
+            label: 最近のトラックバック
+          sub_photo:
+            label: フォト
+          sub_tag_cloud:
+            label: タグクラウド
+          sub_free_box:
+            label: サイドバー フリーボックス
+          sub_social_button:
+            label: ソーシャルボタン
+          sub_powered:
+            label: サイドバーパワード
+          sub_category:
+            label: カテゴリ
+
+        widgetset:
+          site_widgetset:
+            label: サイドバーウィジェットセット
+            order: 1000
+            widgets:
+              - About
+              - カテゴリ
+              - タグクラウド
+              - ソーシャルボタン
+              - サイドバーパワード

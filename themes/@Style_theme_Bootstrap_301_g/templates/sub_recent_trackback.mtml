@@ -1,0 +1,10 @@
+<mt:If name="main_index">
+<ul class="nav nav-list">
+<li class="nav-header"><i class="fa fa-exchange"></i>&nbsp;TrackBacks</li>
+<mt:Pings lastn="5" include_blogs="site">
+<li><a href="<$mt:PingURL$>"><$mt:PingTitle$></a>
+<div class="ping-name com_tb"><span><i class="fa fa-external-link"></i>&nbsp;<$mt:PingBlogName$></span></div></li>
+</mt:Pings>
+</ul>
+<hr>
+</mt:If>

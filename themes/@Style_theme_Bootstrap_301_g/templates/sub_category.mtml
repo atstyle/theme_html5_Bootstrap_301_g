@@ -1,0 +1,21 @@
+<ul class="nav nav-list">
+<li class="nav-header"><i class="fa fa-folder-open"></i>&nbsp;Categories
+<mt:TopLevelCategories>
+
+<mt:SubCatIsFirst>
+<ul class="nav nav-list">
+</mt:SubCatIsFirst>
+
+<mt:IfNonZero tag="MTCategoryCount">
+<li><a href="<$mt:CategoryArchiveLink$>" title="「<mt:CategoryLabel>」on「<$mt:BlogName$>」"><mt:CategoryLabel></a><mt:Else><li><mt:CategoryLabel></mt:Else></mt:IfNonZero><mt:SubCatsRecurse max_depth="3"></li>
+
+<mt:SubCatIsLast>
+</ul>
+</mt:SubCatIsLast>
+
+</mt:TopLevelCategories>
+
+</li>
+</ul>
+
+<hr>

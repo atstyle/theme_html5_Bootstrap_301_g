@@ -1,0 +1,29 @@
+<mt:Blogs include_blogs="children">
+<ul class="nav nav-list">
+<mt:Pages no_folder="1" sort_by="title" sort_order="ascend">
+<li id="page-<$mt:PageID$>"><a href="<$mt:PagePermalink$>" title="【<$mt:PageTitle$>】on「<$mt:BlogName$>」"><i class="fa fa-angle-right"></i>&nbsp;<$mt:PageTitle$></a></li>
+</mt:Pages>
+
+<mt:TopLevelFolders>
+<li class="nav-header"><a href="<$MT:BlogURL$><$MT:FolderPath$>/"><i class="fa fa-folder-open"></i> <$mt:FolderLabel$></a>
+<mt:Pages sort_by="created_on" sort_order="ascend">
+<mt:PagesHeader>
+<ul class="nav nav-list">
+</mt:PagesHeader>
+<mt:SetVarBlock name="curbasename"><$mt:PageBasename$></mt:SetVarBlock>
+<mt:Unless name="curbasename" eq="index">
+<li><a href="<$mt:PagePermalink$>"><i class="fa fa-angle-right"></i> <$mt:PageTitle$></a></li>
+<$mt:SubFolderRecurse$>
+</mt:Unless>
+<mt:PagesFooter>
+</ul>
+</mt:PagesFooter>
+</mt:Pages>
+</li>
+</mt:TopLevelFolders>
+</ul>
+</mt:Blogs>
+</ul>
+
+<hr>
+
